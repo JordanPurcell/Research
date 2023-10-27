@@ -1,3 +1,0 @@
-Outputs for batches with RMSE >= 250 keV 
-All residuals with a '1' next to them were data included in the training. 
-          exp      Train        Res 
