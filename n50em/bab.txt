@@ -1,0 +1,733 @@
+.NONE   
+\documentclass[aps,prl,twocolumn,tightenlines,superscriptaddress,showpacs]{revtex4-1}
+\usepackage{epsfig,rotating,amsmath,lineno}
+\usepackage{multirow}
+\usepackage{subcaption,graphicx}
+
+
+%\def\tj #1 #2 #3 #4 #5 #6 {\left( \begin{array}{ccc} #1 & #2 & #3 \\ #4 & #5 & #6 \end{array}\right) }
+
+%\linenumbers
+
+\begin{document}
+
+\title{Electromagnetic properties of the isotones with ..N=50.. with the p35-i3 Hamiltonian}
+
+\author{J. A. Purcell}
+\affiliation{Department of Physics and Astronomy, Michigan State University, East Lansing, Michigan 48824-1321, 
+USA
+and Facility for Rare Isotope Beams, Michigan State University, East Lansing, Michigan 48824-1321, 
+USA}
+\author{B. A. Brown}
+\affiliation{Department of Physics and Astronomy, Michigan State University, East Lansing, Michigan 48824-1321, 
+USA
+and Facility for Rare Isotope Beams, Michigan State University, East Lansing, Michigan 48824-1321, 
+USA}
+
+
+
+%\date{\today}
+
+\begin{abstract}
+
+
+
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The properties of the isotones with with ..N=50.. have historically been testing ground for
+shell-model configuration interaction (CI) calculations. 
+
+We consider the electromagnetic data for low-lying states of nuclei between $(78)Ni and $(100)Sn 
+that can be described by protons in ..({0f_(5/2), 1p_(3/2), 1p_(1/2), 0g_(9/2)}.. 
+(the ..\pi j4.. model space).
+The region between $(90)Zr and $(100)Sn is well established territory where many 
+wavefunctions are dominated by ..(1p_(1/2), 0g_(9/2)).. orbitals 
+[r=talmi60], [r=cohen64], [r=aurbach65], [r=vervier66], [r=ball72], [r=gloeckner73], [r=blomqvist85].
+The full ..\pi j4..  space has been considered previously with Hamiltonians derived
+with the singular-valued decomposition method (SVD) 
+[r=jun45], [r=jw88], [r=jj44a], as well as those obtained VS-IMSRG methods [r=Yuan24].
+This paper is based on set of  newly derived SVD Hamiltonians called p30-i3, p35-i2 and p35-i3 [r=p35i3].
+In the notation px-iy, x stands for the number of SVD parameters and y stands for
+the ab-initio starting points used in [r=p35i3]. 
+
+The starting point for the Hamiltonians in derived in [r=p35i3]
+are those obtained with the  VS-IMSRG method. These are 
+obtained using the EM 1.8/2.0 NN+3N interaction [r=Heb2011] in a 
+harmonic oscillator basis with frequency ..\hbar \omega=12.. MeV, 
+truncated to 13 major shells (..2n+l \leq.. ..e_(\rm max)=12..). We normal order 
+with respect to the Hartree-Fock ground state of the reference and discard the 
+residual 3N interaction. We then decouple the ..\pi j4.. valence space,
+using the Magnus formulation of the IMSRG.
+The results obtained with the standard approximation [r=sr19], truncating all 
+operators at the two-body level throughout the flow, including inside 
+nested commutators are labeled IMSRG(2) in [r=p35i3].
+The Hamiltnoians obtained
+with the SVD method starting with IMSRG(2) are are labeled ..i2...
+ 
+Another starting point labeled IMSRG(3f2) in [r=p35i3]
+introduces a correction in which intermediate three-body operators arising 
+in nested commutators are incorporated by rewriting the double 
+commutator in a factorized form while maintaining the same computational 
+scaling as the IMSRG(2) approximation [r=He24]. As in ref. [r=He24], we include factorized terms 
+with a one-body intermediate during the flow, and include terms with a 
+two-body intermediate at the end of the flow. We perform the procedure for
+two different references, $(78)Ni and $(100)Sn, corresponding to empty
+and full valence spaces, respectively, and take the average of the two resulting
+valence space Hamiltonians as our starting point for the fitting procedure. 
+The Hamiltnoians obtained
+with the SVD method with starting with IMSRG(3f2) are are labeled ..i3...
+
+We showed in [r=p35i3] that the IMSRG(3f2) provided a better starting
+point for describing the experimental energy data in the sense that
+the rms deviation obtained with ..p<10.. SVD parameters was
+much smaller with IMSRG(3f2) compared to IMSRG(2). Thus,
+IMSRG(3f2) might provide a better input for the linear combinations
+of ..69-p.. SVD parameters that are not well determined from experimental
+data.
+ 
+
+In [r=p35i3] we showed that the optimal number number of SVD parameters
+was about ..p=35.. based on the minimum in the rms deviations in trial sets of data.
+For the purpose of investigating the Hamiltonian uncertainties
+in the observables we also obtained a Hamiltonian with ..p=30..
+SVD parameters. 
+
+
+\section{Electromagnetic observables}
+
+
+ 
+
+
+
+
+
+
+One can express the one-body reduced matrix element for the ..n..-particle wave
+function in the form of a product over one-body transition densities
+(OBTD) times reduced single-particle matrix elements (SPME)
+..<k_^a||O$^l||k_^b>..
+..
+<f||\hat{O}$^l||i> =  <n ^w_f J_f||\hat{O}$^l||n ^w_i J_i>
+..
+..
+= &S_(k_^a k_^b) ,,OBTD,,(f i k_^a k_^b ^l)
+ <k_^a||O$^l||k_^b>,     [e=e2]
+..
+where the OBTD is given by
+..
+,,OBTD,,(f i k_^a k_^b ^l)
+= { <n ^w_f J_f||[a$+_(k_^a)&X&a_(k_^b)]$^l||n ^w_i J_i>
+\over  sq (2^l+1) }.   [e=e4]
+..
+The labels ..i.. and ..f.. are a shorthand notation for the initial
+and final state quantum numbers ..(n ^w_f J_f).. and ..(n ^w_i J_i)..,
+respectively.
+The ..k_^a.. label the spherical single-particle states 
+..(n,&l,j).. used in the model space.
+The NuShellX code [r=nushellx] provides the wavefunctions and the
+resulting OBTD.
+
+The ..<k_^a||O$^l||k_^b>.. are the SPME
+obtained with the ..E^l.. and ..M^l.. operators.
+We consider magnetic moments
+..
+^m = sq\frac{4^p}{3} <i,J,M=J|{\hat O}(M1)|i,J,M=J>
+..
+..
+= sq\frac{4^p}{3}
+ {\left( \begin{array}{ccc} J & 1 & J \\ -J & 0 & J \end{array}\right) }
+<i,J||{\hat O}(M1)||i,J>,  [e=m1]
+..
+quadrupole moments
+..
+Q = sq\frac{16^p}{5} <J,M=J|{\hat O}(E2)|J,M=J>
+..
+..
+= sq\frac{16^p}{5}
+ {\left( \begin{array}{ccc} J & 2 & J \\ -J & 0 & J \end{array}\right) }
+<i,J||{\hat O}(E2)||i,J>,    [e=m2]
+..
+and reduced transition probabilities
+..
+B(O$^l,i \rightarrow f) = \frac{|<f||\hat{O}$^l||i>|$2}{2J_i+1}   [e=bm1] 
+..
+ 
+
+
+We consider mainly the B(M1) and B(E2) with the
+standard form of the SPME as given in [r=jw88em].
+B(E1) are zero since the parity-changing ^l=1 operator 
+does not connect any of the orbitals in the  ..j4.. model space.
+B(M2) are not considered since the parity-changing ^l=2 operator
+it limited to only one, ..0g_(9/2)-1f_(5/2)..,
+of the 10  SPME with one orbital in the ..j4.. model
+space involved in M2 transitions.
+We have a short section on B(E3) as observed in inelastic scattering
+experiment.
+
+For ..M1.. the SPME involve spin and orbital g-factors which 
+are usually treated as effective parameters to take into account
+configuration mixing outside the ..j44.. model space
+and mesonic-exchange currents. We use the 
+orbital-dependent effective g-factors
+obtained from fits to data in [r=jw88em]. 
+For ..E2.. the SPME involve radial integrals.
+It is common to harmonic-oscillator radial wavefunctions.
+For example,  a value of ..b$2=4.481.. for the oscillator parameter
+was used in [r=jw88em].
+In addition, one uses an effective proton charge ..e_p..
+to take into account mixing with configurations
+that are not included in the ..j4.. model space.
+In [r=jw88em] a value of ..e_p=2.0.. was needed with 
+their harmonic-oscillator radial wavefunction assumption.
+It is better to use more realistic nucleus-dependent
+radial wavefunctions obtained with energy-density functionals (EDF).
+For this purpose we use the Skx Skyrme functional [r=skx].
+With this EDF a value of ..e_p=1.8.. gives a good
+reproduction of  all of the ..E2.. data we consider (see Sec. ?).
+  
+ 
+\section{Uncertainties related to the choice of Hamiltonian}
+
+Here we compare global sets of electromagnetic observables obtained with the 
+new p35-i3, p35-i3 and p30-i3 Hamiltonians together with 
+older Hamiltonians, jun45 [r=jun45], and jj44a [r=jj44a].
+The purpose is to use these comparisons to deduce Hamiltonian uncertainties
+in the observables. We note that all of these Hamiltonians are
+based on fits to data in the ..\pi j4.. model space, except
+for jun45 which is based on a fit to data in larger
+proton-neutron ..jj44.. model space.  
+
+We calculated observables for all nuclei between $(80)Zn
+and $(98)Cd and divided for results into those for nuclei with ..A < 88..
+and those for nuclei with ..A \geq 88... The 
+wavefunctions for low-lying states with ..A<88.. are dominated
+by the three orbitals ..(0f_(5/2),1p_(3/2),1p_(1/2)..
+and those with  ..A \geq 88.. are dominated by
+the two orbitals ..(1p_(1/2),0g_(9/2))... It was found
+in [r=p35i3] that rms deviation between experiment
+and theory for the binding energies excitation 
+energies was significantly larger in the first group (0.12 MeV).
+than those in the second groop (0.05 MeV). Thus, 
+we can anticipate that the rms deviations in the 
+various observables will be larger in the first
+group compared to the those in the second group.
+ 
+For each Hamiltonian we calculated the magnetic and quadrupole
+moments for the first state of each ..J$^p...
+Also we calculated the B(M1) and B(E2) for the first state
+of each ..J$^p.. with the first state ..(J+2)$^p..
+We did not include those for which the states were less
+that 200 keV from the second state with the same ..J$^p...
+For set of each set of comparisons we give the rms differences
+in the specific observables. These values are
+indicative of the associated theoretical uncertainties.
+ 
+We show the comparison of results obtained with the IMSRG(3f2)
+starting Hamiltonian for two different values of the
+number of VLC linear combinations varied (30 and 35) in
+Figs. 1 and 2. As expected the rms difference is
+always larger for nuclei ..A<88.. compared to those
+for ..A \geq 88... For the moments (Fig. 1)
+and B(E2) (Fig. 2-cd) 
+this difference is about a factor of two. For the
+B(M1) the difference is much larger. The reason
+is that the small B(M1) (WU = 1.79 ^m_N$2) arise from
+cancellations between components in Eq. [e=e2]
+which  are particularly sensitive to small
+changes in the Hamiltonian.
+
+We find a particular outlier for the B(E2)
+in Fig. 2c with (p30-i3,p35-i3) values of (4,142) e$2 fm$4.
+This comes from the 7/2_1$- to 3/2_1$- transition in
+$(81)Ga. As seen in Fig. 9 of [r=p35i3], there
+are two low-lying 3/2$- states in $(81)Ga.
+The B(E2) for the 7/2_1$- to 3/2_2$- transition
+are (74,8) e$2 fm$4. It is not clear what part
+of the Hamiltonian is responsible for the 
+interchange of properties for these B(E2) transitions.  
+  
+The calculated gamma-decay branching of the 7/2$-
+state to the (3/2$-_1,5/2$-_1) states is (25,75)%
+for p35i3 and (1,99)% for p30i3.
+The gamma-decay data of [r=ga81] gives
+(0,100)% for the state at 1.40 MeV. Assuming
+this is the 7/2$- state, the data is in agreement
+with the p30i3 Hamiltonian result. 
+
+
+
+
+
+
+We show the comparison of results obtained with the 
+IMSRG(2)and IMSRG(3f2)
+starting Hamiltonian for 35 varied VLC linear combinations,
+(p35-i2) and (p35-i3), respectively in Figs. 3 and 4.
+The scatter and rms deviations are similar to
+the (p30-i2) and (p35-i3) comparisons discussed above.
+
+The jj44a Hamiltonian [r=jj44a] was obtained from a
+fit to the ..N=50.. energy data as known in the year 2004.
+The comparison of electromagnetic results
+obtained with jj44a and p35-i3 are shown in Fig. 5 and 6. 
+The scatter is significantly worse compared to the
+previous comparisons, particularly for the B(M1) and 
+B(E2) in Fig. 6.
+
+Finally, in Figs. 7 and 8 we show the comparison 
+of the electromagnetic results obtained with the 
+jun45 Hamiltonian compared to p35-i3.
+The scatter is much worse. This reflects the
+fact that the jun45 Hamiltonian was obtained from
+a much wider set of nuclei. In particular,
+the ..T=1.. part of  the jun45 Hamiltonian is influenced
+by data for the nickel isotopes.
+In [r=jj44a] differences in the ..T=1.. Hamiltonians
+obtained from the ..N=50.. isotones and the ..Z=28..
+isotopes were discussed. In particular, the 
+relatively lower energy
+of 2$+ states in $(70-78)Ni compared to those in $(92)Mo-$(98)Cd
+results in the inversion of seniority two and four
+states in $(72-76)Ni compared to $(94)Mo-$(96)Cd.
+Thus, one concludes that "universal-type" Hamiltonians
+are useful, but one can do better with local Hamiltonians
+designed from a specific range of nuclei. Ultimately
+one should consider and construct nucleus-dependent 
+Hamiltonians in the spirit of VS-IMSRG calculations [r=sr19].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}
+\includegraphics[scale=0.40]{mi3.eps}
+\caption{Comparison of  moments obtained with the 
+p30-i3 and p35-i3 Hamiltonians.
+}
+\label{ [f=mi3] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.40]{bi3.eps}
+\caption{Comparison of B(M1) and B(E2) values obtained with the 
+p30-i3 and p35-i3 Hamiltonians.
+}
+\label{ [f=bi3] }
+\end{figure}
+
+
+
+
+\begin{figure}
+\includegraphics[scale=0.40]{m35.eps}
+\caption{Comparison of  moments obtained with the 
+p35-i2 and p35-i3 Hamiltonians.
+}
+\label{ [f=m35] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.40]{b35.eps}
+\caption{Comparison of B(M1) and B(E2) values obtained with the 
+p35-i2 and p35-i3 Hamiltonians.
+}
+\label{ [f=b35] }
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[scale=0.40]{ma.eps}
+\caption{Comparison of  moments obtained with the 
+jj44a and p35-i3 Hamiltonians.
+}
+\label{ [f=ma] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.40]{ba.eps}
+\caption{Comparison of B(M1) and B(E2) values obtained with the 
+jj44a and p35-i3 Hamiltonians.
+}
+\label{ [f=ba] }
+\end{figure}
+
+
+
+\begin{figure}
+\includegraphics[scale=0.40]{mh.eps}
+\caption{Comparison of  moments obtained with the 
+jun45 and p35-i3 Hamiltonians.
+}
+\label{ [f=mh] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.40]{ba.eps}
+\caption{Comparison of B(M1) and B(E2) values obtained with the 
+jun45 and p35-i3 Hamiltonians.
+}
+\label{ [f=bh] }
+\end{figure}
+
+
+
+
+\begin{figure}
+\includegraphics[scale=0.35]{dipoles.png}
+\caption{
+}
+\label{ [f=dipoles.png] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.35]{qm.png}
+\caption{
+}
+\label{ [f=qm.png] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.35]{qmfree.png}
+\caption{
+}
+\label{ [f=qmfree.png] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.30]{muq.png}
+\caption{
+}
+\label{ [f=muq.png] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.35]{be02.png}
+\caption{
+}
+\label{ [f=be02.png] }
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.35]{be86.png}
+\caption{
+}
+\label{ [f=be86.png] }
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Comparison between theory and experiment}
+
+Jordan will add his figures and discussion here
+
+
+
+
+\section{Configuration with ..j$n..}
+
+Will modify this section
+
+
+
+
+For states with good seniority the ..B(E2)..
+between ..j$n.. configurations with ..^n..=2 is given by [r=bh22]
+..
+B(E2)(j$n,J_i \rightarrow J_f)  = 
+\left[\frac{2j+1-2n}{2j+1-2^n}\right]$2 B(E2)(j$2,J_i \rightarrow J_f). 
+..
+For example, for ..j=9/2.. and ..n=4.. (or ..n=6..) 
+..
+B(E2,j$4,^n=2) = (1/9) B(E2,j$2,^n=2).
+.. 
+
+
+
+\section{Acknowledgements}
+
+
+We acknowledge support from the National Science Foundation grant PHY-2110365.
+
+
+
+.OR ON  
+
+[r=bh22] B. Maheshwari and K. Nomura, Symmetry {\bf 14}, 2680 (2022).
+
+[r=ga81] V. Paziy {\it et al.}, Phys. Rev. C {\bf 102}, 014329 (2020).
+
+[r=skx] B. A. Brown, Phys. Rev. C {\bf 58}, 220 (1998).
+
+[r=nushellx] B. A. Brown and W. D. M. Rae, Nuclear Data Sheets {\bf 120}, 115 (2014).
+
+[r=p35i3] J. A. Purcell, B. A. Brown, B. C. He, S. R. Stroberg, and W. B. Walters,
+     Phys. Rev. C {\bf 111}, 044313 (2025).
+     
+
+[r=sd06] B. A. Brown and W. A. Richter, Phys. Rev. C {\bf7 4}, 034315 (2006).
+
+[r=mag20] A. Magilligan and B. A. Brown, Phys. Rev. C {\bf 101}, 064312 (2020).
+
+
+[r=He24] B. C. He and S. R. Stroberg, Phys. Rev. C {\bf 110}, 044317 (2024). 
+
+[r=Hjorth-Jensen1995] M. Hjorth-Jensen, T. T. S. Kuo and E. Osnes,
+Phys. Rep. {\bf 261}, 125 (1995).
+
+[r=Sun2018] Z. H. Sun, T. D. Morris, G. Hagen, G. R. Jansen, and T. Papenbrock,
+Phys. Rev. C {\bf 98}, 054320 (2018).
+
+[r=sr19] S. R. Stroberg, H. Hergert, S. K. Bogner, and J. D. Holt, Annu. Rev. Nucl. Part. Sci. 2019. {\bf 69}, 307 (2019).
+
+[r=fp04] M. Honma, T. Otsuka, B. A. Brown and T. Mizusaki, Phys. Rev. C {\bf 69}, 034335 (2004).
+
+
+[r=jun45] M. Honma, T. Otsuka, T. Mizusaki, and M. Hjorth-Jensen, Phys. Rev. C {\bf 80}, 064323 (2009). 
+
+[r=jj44b] S. Mukhopadhyay, B. P. Crider, B. A. Brown, S. F. As hley, A. Chakraborty, A. Kumar, E. E. Peters, M. T. McEllistrem, F. M. Prados-Estevez, and S. W. Yates, Phys. Rev. C {\bf 95}, 014327 (2017).
+
+
+
+[r=Arima1968] A. Arima, S. Cohen, R. D. Lawson, and M. H. MacFarlane, 
+Nucl. Phys. {\bf A108}, 94 (1968).
+
+
+[r=Wildenthal1984] B. H. Wildenthal, Prog. Part. Nucl. Phys. {\bf 11}, 5 (1984).
+
+[r=jw88] X. Ji and B. H. Wildenthal, Phys. Rev. C {\bf 37}, 1256 (1988).
+
+[r=jw88em] X. Ji and B. H. Wildenthal, Phys. Rev. C {\bf 38}, 2849 (1988).
+
+[r=jj44a] A. F. Lisetskiy, B. A. Brown, M. Horoi and H. Grawe, Phys. Rev. C {\bf 70}, 044314 (2004).
+
+[r=Yuan24] Q. Yuan and B. S. Hu, Phys. Lett. B {\bf 858}, 139018 (2024).
+
+
+[r=talmi60] I. Talmi and I. Unna, Nucl. Phys. {\bf 19}, 225 (1960).
+
+[r=cohen64] S. Cohen, R. D. Lawson, M. H. Macfarlane, and M. Soga, Phys. Lett. {\bf 10}, 195 (1964).
+
+[r=aurbach65] N. Auerbach and I. Talmi, Nucl. Phys. {\bf 64}, 458 (1965).
+
+[r=vervier66] J. Vervier, Nucl. Phys. {\bf 75}, 17 (1966).
+
+[r=ball72] J. B. Ball, J. B.McGrory, and J. S. Larsen, Phys. Lett. {\bf 41B}, 581 (1972).
+
+[r=gloeckner73] D. H. Gloeckner and F. J. D. Serduke, Nucl. Phys . {\bf A220}, 4 (1973).
+
+[r=blomqvist85] J. Blomqvist and L. Rysdtrom, Phys. Scr. {\bf 31}, 31 (1985).
+
+[r=cu79] L. Olivier {\it et al.}, Phys. Rev. Lett. {\bf 119}, 19201 (2017). 
+
+[r=in99] L. Nies {\it et al.}, Phys. Rev. Lett. {\bf 131}, 022502 (2023).
+
+
+
+[r=in131] V. Vaquero {\it et al.}, Phys. Rev. Lett. {\bf 124}, 022501 (2020).
+
+
+
+
+[r=Heb2011] K. Hebeler, S. K. Bogner, R. J. Furnstahl, A. Nogga, and A. Schwenk Phys. Rev. C {\bf 83}, 031301(R) (2011)
+
+
+[r=ni78] R. Taniuchi {\it et al.}, Nature {\bf 569}, 53 (2019). 
+
+[r=ensdf} ENSDF database as of January 1st, 2024,
+http://www.nndc.bnl.gov/ensarchivals/
+
+[r=supp] See Supplemental Material at [URL will be inserted by publisher]
+for the p35i3-svd-fit-results.txt file that contains a list of the
+experimental energy data used for the SVD fit together with the 
+final theoretical energies obtained with the p35-i3 Hamiltonian,
+and the p35i3-tbme.txt file that contains a list of the SPE and
+TBME for p35-i3 Hamitonian.
+     
+
+[r=tap16] J. Taprogge {\it et al.}, Eur. Phys. J. A {\bf 52}, 347 (2016).
+
+[r=zn80w] J. Van de Walle, Phys. Rev. Lett. {\bf 107}, 142501 (2007). 
+
+[r=zn80s] Y. Shiga {\it et al.}, Phys. Rev. C {\bf 93}, 024320 (2016). 
+
+[r=mcsm] Y. Tsunoda, T. Otsuka, N. Shimizu, M. Honma, and Y. Utsuno,
+Phys. Rev. C {\bf 89}, 031301(R) (2014). 
+
+[r=zn80cort] M. L. Cortes {\it et al.}, Phys. Rev. C {\bf 97}, 044315 (2018). 
+
+[r=ga81p] 
+ V. Paziy {\it et al.}, Phys. Rev. C {\bf 102}, 014329 (2020). 
+ 
+[r=ch10] 
+ B. Cheal {\it et al.}, Phys. Rev. Lett. {\bf 104}, 252502 (2010). 
+ 
+[r=ga81d] 
+ J. Dudouet {\it et al.}, Phys. Rev. C {\bf 100}, 011301(R) (2019).
+
+[r=ga81guil] 
+ Guillaume Maquart, Physique Nucleaire Experimental, 
+     Universtite de Lyon, (2017). 
+     
+ [r=olivPhD] 
+ L. Olivier., Ph.D. thesis, University Paris-Saclay, (2017)
+     
+[r=ge82alsh] 
+ M. F. Alshudifat {\it et al.}, Phys.Rev. C {\bf 93}, 044325 (2016). 
+ 
+[r=ge82vern] 
+ D. Verney {\it et al.}, Phys. Rev. C {\bf 76}, 054312 (2007). 
+ 
+[r=ge82rzac] 
+T. Rzaca-Urban, W. Urban, J. L. Durell, A. G. Smith, 
+and I. Ahmad, 
+     Phys. Rev. C {\bf 76}, 027302 (2007). 
+     
+[r=ge82hwan] 
+ K. Hwang, J. H. Hamilton, A. V. Ramayya, N. T. Brewer, Y. X. Luo, 
+     J. O. Rasmussen, and S. J. Zhu, Phys. Rev. C {\bf 84}, 024305 (2011). 
+     
+[r=ge82carp] 
+ M. P. Carpenter {\it et al.}, Physics Division Annual Report 2006, 
+     Argonne National Labortory. 
+     
+[r=ge82sahi] 
+ E. Sahin, G. de Angelis, G. Duchene, T. Faul, A. Gadeaa, A. F. Lisetskiy, D. Ackermann, A. Algora, S. Aydinhi, F. Azaiez {\it et al.}, Nucl. Phys. A {\bf 893}, 1 (2012). 
+ 
+[r=ge82wilm] 
+ D. Wilmsen, Thesis, Universite de Caen Normandie (2017). 
+ 
+[r=thisse23]
+ D. Thisse, {\it et al.}, Eur. Phys. J. A 59, 153 (2023)
+ 
+
+[r=sie12] K. Sieja and F. Nowacki, Phys. Rev. C {\bf 85}, 051301(R) (2012).
+
+ 
+[r=ge82gade] 
+ A. Gade {\it et al.}, Phys. Rev. C {\bf 81}, 064326 (2010). 
+ 
+[r=as83bacz] 
+ P. Baczyk, W. Urban, D. Zlotowska, M. Czerwinski, 
+     T. Rzaca-Urban, A. Blanc, M. Jentschel, P. Mutti, U. Koster, T. Soldner, 
+     G. de France, G. Simpson, and C. A. Ur, Phys. Rev. C {\bf 91}, 047302 (2015) 
+     
+[r=as83rezy] 
+ K. Rezynkina {\it et al.}, Phys. Rev. C {\bf 106}, 014320 (2022). 
+ 
+[r=se84drou] 
+ F. Drouet, G. S. Simpson, A. Vancraeyenest, G. Gey, 
+     G. Kessedjian, T. Malkiewicz, M. Ramdhane, C. Sage, 
+     G. Thiamova, T. Grahn {\it et al.}, EPJ Web Conf. {\bf 62}, 01005 (2013), 
+     DOI: 10.1051/epjconf/20136201005 
+     
+[r=as83porq] 
+ M. G. Porquet {\it et al.}, Phys. Rev. C {\bf 84}, 054305 (2011)
+ 
+[r=as83winger] 
+ J. A. Winger, J. C. Hill, F. K. Wohn, R. L. Gill, X. Ji, and B.H. Wildenthal, Phys. Rev. C {\bf 38}, 285 (1988). 
+
+[r=se84mullin] 
+ S. M. Mullins, D. L. Watson, H. T. Fortune, 
+     Phys. Rev. C {\bf 37}, 587 (1988). 
+
+[r=se84hoff] 
+ P. Hoff and B. Fogelberg, Nucl. Phys. A {\bf 368}, 210 (1981). 
+ 
+[r=se84litz] 
+ J. Litzenger {\it et al.}, Phys. Rev. C {\bf 92}, 064322 (2015). 
+
+     
+[r=se84knight] 
+ J. D. Knight, C. J. Orth, W. T. Leland and A. B. Tucker, 
+     Phys. Rev. C {\bf 9}, 1467 (1974). 
+     
+[r=kr86urban] 
+ W. Urban {\it et al.}, Phys. Rev. C {\bf 94}, 044328 (2016). 
+ 
+[r=kr86prev] 
+ A. Prevost {\it et al.}, Eur. Phys. J A {\bf 22}, 391 (2004). 
+ 
+[r=kr86winter] 
+ G. Winter, L. Funke, R. Schwengner, H. Prade, R. Wirowski, N. Nicolay, A. Dewald, P. von Brentano, Z. Phys. A {\bf 343}, 369 (1992).
+
+[r=in99nies]
+L. Nies {\it et al.}, Phys. Rev. Lett. {\bf 131}, 022502 (2023).
+
+[r=wang2021] M. Wang {\it et al.}, Chinese Phys. C {\bf 45}, 030003 (2021).
+
+[r=in99mou]
+M. Mougeot {\it et al.}, Nature Physics {\bf 17}, 1099 (2021).
+
+[r=sn100hin] C. B. Hinke, {\it et al.},  Nature {\bf 486}, 341 (2012).
+
+
+
+
+
+.OR OFF
+
+\end{document}
+
+.end
+
+\section{Uncertainties coming from mixing of closely-spaced levels}
+
+Consider small mixing (^b << 1) of two levels ..|1>.. and ..|2>..
+due to some uncertainty in the Hamiltonian ..^dH..
+..
+|a> = ^a|1> + ^b|2>
+..
+and
+..
+|b> = ^b|1> - ^a|2>
+..
+where
+..
+^b  = \frac{<1|^dH|2>}{(E_1 - E_2)}
+..
+
+
+The matrix element for the transition to a third level
+|3> = after mixing are 
+..
+M_(a3) = <a| M$(op) |3> = ^a  <1| M$(op) |3> + ^b  <2| M$(op) |3>
+
+
+
