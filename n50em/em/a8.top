@@ -1,0 +1,113 @@
+ls 1.3
+ax
+lrt
+nr 90.,100.,-60.,40.
+fi 2.,6.,4.,7.
+88.,101.,2.,2.,A
+-60.,60.,10.,20.,(e fm$2)
+dl 90.,40.,Q 8$+
+
+co green
+ds fir 2.0
+df q8r.dat
+
+co red
+ds cro 2.0
+df q8t.dat
+
+co black
+ds dashf
+di
+88.,0.
+101.,0.
+
+
+
+co black
+ds fir
+dt xydy
+di
+90.,-51.,3.
+dt xy
+di
+92.,-34.
+
+ax
+lrt
+nr 0.,0.,10.,12.
+fi 2.,6.,7.,9.
+88.,101.,2.,2.,A
+10.,12.,.2,1.,(^m_(N) )
+dl 90.,11.6,^m 8$+
+
+co green
+ds fir 2.0
+df m8r.dat
+
+co red
+ds cro 2.0
+df m8t.dat
+
+co black
+ds fir
+dt xy
+di
+90.,10.84
+92.,11.30
+94.,11.13
+96.,10.97
+
+ls 1.0
+
+dl 90.,10.2,Zr
+dl 92.,10.2,Mo
+dl 94.,10.2,Ru
+dl 96.,10.2,Pd
+dl 98.,10.2,Cd
+
+
+
+
+dl 90.,10.4,90
+dl 92.,10.4,92
+dl 94.,10.4,94
+dl 96.,10.4,96
+dl 98.,10.4,98
+
+
+
+
+
+ls 1.3
+ax
+lrt
+nr 90.,100.,0.,80.
+fi 2.,6.,2.,4.
+88.,101.,2.,2.,A
+0.,100.,10.,20.,(e$2 fm$4)
+dl 92.,80.,B(E2) 8$+ to 6$+
+
+co green
+ds fir 2.0
+df b8r.dat
+
+co red
+ds cro 2.0
+df b8t.dat
+
+
+co black
+ds fir
+dt xydy
+di
+96.,9.4,1.0
+98.,38.,4.
+dt xy
+di
+90.,75.8,2.3
+92.,26.8,0.3
+94.,0.09
+
+
+
+
